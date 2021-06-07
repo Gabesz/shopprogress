@@ -2,12 +2,12 @@
 
 class CartItem {
 
-  private $id;
+  private $product;
   private $quantity;
   private $properties;
 
-  public function __construct(string $id, int $quantity, array $properties) {
-    $this->id = $id;
+  public function __construct(Product $product, int $quantity, array $properties) {
+    $this->product = $product;
     $this->quantity = $quantity;
     $this->properties = $properties;
   }
@@ -24,7 +24,12 @@ class CartItem {
     return $this->quantity;
   }
 
-  public function getPrice() {
-    return $this->id * 10;
+  public function getProduct() {
+    return $this->product;
   }
+
+  public function getProperties() {
+    return $this->properties;
+  }
+
 }

@@ -10,15 +10,6 @@ class Cart {
     $this->items[] = $item;
   }
 
-  public function editQuantity(CartItem $cartItem, int $quantity) {
-    foreach($this->items as $item) {
-      if($item == $cartItem){
-        $item->setQuantity($quantity);
-        break;
-      }
-    }
-  }
-
   public function remove(CartItem $cartItem) {
     foreach($this->items as $key => $item) {
       if($item == $cartItem){
