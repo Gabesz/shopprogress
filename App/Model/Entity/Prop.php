@@ -1,6 +1,6 @@
 <?php namespace App\Model\Entity;
 
-class Prop {
+abstract class Prop {
   protected $id;
   protected $propName;
   protected $propValue;
