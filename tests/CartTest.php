@@ -14,7 +14,7 @@ class CartTest extends TestCase {
     $cart = new Cart();
     $cart->add($cartItem1);
     $this->assertEquals(
-        $cart->getCartItem(0),
+        $cart->getItem(0),
         $cartItem1
     );
   }
