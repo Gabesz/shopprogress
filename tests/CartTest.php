@@ -8,9 +8,9 @@ use App\Model\Cart;
 
 class CartTest extends TestCase {
 
-  public function testItemCanBeSame(): void
+  public function testItemCanBeSameInCart(): void
   {
-    $cartItem1 = new CartItem(1, 1, [new COlor(1, 'xl')]);
+    $cartItem1 = new CartItem(1, 1, [new Color(1, 'red')]);
     $cart = new Cart();
     $cart->add($cartItem1);
     $this->assertEquals(
