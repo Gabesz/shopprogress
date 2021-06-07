@@ -1,1 +1,0 @@
-{"version":1,"defects":{"Test\\Test::testCanBeTheSame":4},"times":{"Test\\Test::testCanBeUsedAsString":0.005,"Test\\Test::testCanBeTheSame":0.006,"Test\\Test::testCartitemCanBeSame":0.007,"CartTest::testCartitemCanBeSame":0.007}}
