@@ -5,7 +5,7 @@ class Prop {
   protected $propName;
   protected $propValue;
 
-  protected function getPropValue() {
+  public function getValue() {
     return $this->propValue;
   }
 }

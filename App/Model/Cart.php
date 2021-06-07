@@ -29,7 +29,7 @@ class Cart {
 
   public function getTotal() {
     return empty($this->items)? 0 : array_sum(array_map(function(CartItem $v)  {
-      return $v->getPrice() * $v->getQuantity();
+      return $v->getProduct()->getPrice() * $v->getQuantity();
     }, $this->items));
   }
 
