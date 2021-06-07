@@ -11,7 +11,7 @@ class CartTest extends TestCase {
   public function testItemCanBeSameCart(): void
   {
     $product = new Product(1, 1020, 'Mobil device');
-    $cartItem1 = new CartItem($product, 1, [new Color(1, 'red')]);
+    $cartItem1 = new CartItem($product, 1, ['color' => new Color(1, 'red')]);
     $cart = new Cart();
     $cart->add($cartItem1);
 

@@ -10,8 +10,10 @@ use App\Model\Cart;
 
 
 $product = new Product(1, 120, 'Honda car');
-$cartItem1 = new CartItem($product, 1, [new Color(1, 'red')]);
+$cartItem1 = new CartItem($product, 1, ['color' => new Color(1, 'red')]);
 $cart = new Cart;
 $cart->add($cartItem1);
 var_dump($cart->getItem(0)->getProduct()->getName());
 var_dump($cart->getItem(0)->getProperties());
+
+$cart->getItem(0)->getProperty('color');

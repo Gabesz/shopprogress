@@ -32,4 +32,7 @@ class CartItem {
     return $this->properties;
   }
 
+  public function getProperty($key) {
+    return $this->properties[$key];
+  }
 }
