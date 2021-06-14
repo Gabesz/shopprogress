@@ -5,17 +5,41 @@ class Product {
   private $id;
   private $price;
   private $name;
+  private $properties;
 
-  public function __construct(int $id, int $price, string $name) {
+  public function __construct(string $id, float $price, string $name)
+  {
     $this->id = $id;
     $this->price = $price;
     $this->name = $name;
+    $this->properties = [];
+    return $this;
   }
 
+  public function setProperties(array $properties)
+  {
+    foreach ($properties as $key => $property) {
+      $this->properties[$key] = $property;
+    }
+    return $this;
+  }
+
+  public function getProperties(string $key = '')
+  {
+    if (!empty($key)) {
+      if (array_key_exists($key, $this->properties)) {
+        return $this->properties[$key];
+      }
+      throw new \InvalidArgumentException('This property does not exists!');
+    }
+    return $this->properties;
+  }
+
+
   /**
-   * @return int
+   * @return string
    */
-  public function getId(): int
+  public function getId(): string
   {
     return $this->id;
   }
@@ -23,7 +47,7 @@ class Product {
   /**
    * @return int
    */
-  public function getPrice(): int
+  public function getPrice(): float
   {
     return $this->price;
   }
@@ -35,6 +59,24 @@ class Product {
   {
     return $this->name;
   }
+
+  /**
+   * @param float $price
+   */
+  public function setPrice(float $price): void
+  {
+    $this->price = $price;
+  }
+
+  /**
+   * @param string $name
+   */
+  public function setName(string $name): void
+  {
+    $this->name = $name;
+  }
+
+
 
 
 

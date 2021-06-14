@@ -4,20 +4,17 @@ class CartItem {
 
   private $product;
   private $quantity;
-  private $properties;
 
-  public function __construct(Product $product, int $quantity, array $properties) {
+  public function __construct(Product $product, int $quantity)
+  {
     $this->product = $product;
     $this->quantity = $quantity;
-    $this->properties = $properties;
-  }
-
-  public function setProperties(array $properties) {
-    $this->properties = $properties;
+    return $this;
   }
 
   public function setQuantity(int $quantity) {
     $this->quantity = $quantity;
+    return $this;
   }
 
   public function getQuantity() {
@@ -28,11 +25,4 @@ class CartItem {
     return $this->product;
   }
 
-  public function getProperties() {
-    return $this->properties;
-  }
-
-  public function getProperty($key) {
-    return $this->properties[$key];
-  }
 }
